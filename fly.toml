@@ -6,3 +6,10 @@
 
   [[services.ports]]
     port = 3000
+
+[[services]]
+  internal_port = 3005
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 3005
