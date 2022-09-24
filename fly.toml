@@ -1,3 +1,7 @@
+# fly.toml file generated for little-resonance-1062 on 2022-09-23T23:43:03-06:00
+
+app = "little-resonance-1062"
+
 [env]
 
 [[services]]
@@ -20,3 +24,10 @@
 
   [[services.ports]]
     port = 3010
+
+[[services]]
+  internal_port = 3015
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 3015

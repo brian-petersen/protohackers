@@ -15,5 +15,9 @@ async fn main() {
         servers::means_to_end::start("3010").await.unwrap();
     });
 
-    let _ = tokio::join!(task1, task2, task3);
+    let task4 = tokio::spawn(async {
+        servers::budget_chat::start("3015").await.unwrap();
+    });
+
+    let _ = tokio::join!(task1, task2, task3, task4);
 }
