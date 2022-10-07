@@ -19,5 +19,11 @@ async fn main() {
         servers::budget_chat::start("3015").await.unwrap();
     });
 
-    let _ = tokio::join!(task1, task2, task3, task4);
+    let task5 = tokio::spawn(async {
+        servers::unusual_database_program::start("3020")
+            .await
+            .unwrap();
+    });
+
+    let _ = tokio::join!(task1, task2, task3, task4, task5);
 }
