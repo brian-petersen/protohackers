@@ -25,5 +25,9 @@ async fn main() {
             .unwrap();
     });
 
-    let _ = tokio::join!(task1, task2, task3, task4, task5);
+    let task6 = tokio::spawn(async {
+        servers::mob_middle::start("3025").await.unwrap();
+    });
+
+    let _ = tokio::join!(task1, task2, task3, task4, task5, task6);
 }

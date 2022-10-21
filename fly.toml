@@ -34,3 +34,10 @@
 #
 #   [[services.ports]]
 #     port = 3020
+
+[[services]]
+  internal_port = 3025
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 3025

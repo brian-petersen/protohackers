@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+lazy_static = "1.4.0"
 primes = "0.3.0"
 regex = { version = "1.6.0" }
 serde = { version = "1.0.144", features = ["derive"] }
